@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --color-primary: #9fe870;
+  --color-primary-dark: #8cd760;
+  --color-background: #0d0d12;
+  --color-surface: #16161e;
+  --color-surface-hover: #1c1c26;
+  --color-border: #24242e;
+  --color-text-secondary: #a0a0ab;
+  --color-solana: #7214ff;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white font-sans antialiased;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(159, 232, 112, 0.03) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(114, 20, 255, 0.03) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .wise-card {
+    @apply bg-surface border border-border rounded-[2.5rem] p-6 transition-all hover:bg-surface-hover hover:border-border/80;
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .glass-panel {
+    @apply bg-background/80 backdrop-blur-xl border-border;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-black font-bold rounded-full px-6 py-3 transition-all active:scale-95 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/20;
+  }
+  
+  .tapestry-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239fe870' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
