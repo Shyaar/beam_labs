@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+@import 'uniwind';
+
+@theme {
+  --color-primary: #9fe870;
+  --color-primary-dark: #8cd760;
+  --color-background: #0d0d12;
+  --color-surface: #16161e;
+  --color-surface-hover: #1c1c26;
+  --color-border: #24242e;
+  --color-text-secondary: #a0a0ab;
+  --color-solana: #7214ff;
+}
